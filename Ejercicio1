@@ -1,0 +1,47 @@
+package Metodos;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Kristian Ramos
+ */
+public class vector1 {
+    
+    
+    public static void iniciarV(){
+    tam = Integer.parseInt(JOptionPane.showInputDialog("Entre tamaño vecto: "));
+    vec = new int [tam];
+}
+
+    
+    public static int vec[];
+    public static int tam;
+   
+    public static void leerV(){
+    int i;
+    for( i=0; i<tam; i++)
+        vec[i] = Integer.parseInt(JOptionPane.showInputDialog("Enre elementos para pos. " +i+ ":"));
+    }
+    
+    public static void mostrarV(){
+        int i;
+        String x = " [ ";
+        for (i=0; i<tam; i++){
+            if (i<(tam-1)){
+                x += ""+vec[i]+", ";
+            }
+            else{
+                x += ""+vec[i]+"";
+            }
+        }
+        JOptionPane.showMessageDialog( null,"El vector es: "+x);
+    }
+    
+    public static void main (String args[]){
+        iniciarV();
+        leerV();
+        mostrarV();
+        System.exit(0);
+    }
+} 
